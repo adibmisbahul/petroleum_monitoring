@@ -94,7 +94,8 @@ export default function Dashboard() {
           })}
         </div>
         <div className="container-chart-alert">
-          <Chart />
+          <div className="chart"></div>
+          <div className="alert"></div>
         </div>
       </div>
     </div>

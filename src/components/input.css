@@ -1,0 +1,12 @@
+.input {
+    width: 70%;
+    height: 5vh;
+    padding: 2px;
+    padding-left: 10px;
+    border-radius: 5px;
+    background-color: #151b28;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}

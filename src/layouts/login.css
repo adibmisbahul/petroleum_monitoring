@@ -22,4 +22,16 @@
 
 .header-login {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-small;
+    gap: 20px;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
