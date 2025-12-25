@@ -1,0 +1,44 @@
+.container-sidebar {
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    border-bottom: solid 1px #20283c;
+    border-right: solid 1px #20283c;
+}
+
+.top h1 {
+    font-size: x-large;
+}
+
+.top p {
+    margin-top: -20px;
+    font-size: small;
+    color: #4a5565;
+}
+
+.top-text {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.oilIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #372811;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

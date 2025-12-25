@@ -10,6 +10,7 @@
 }
 
 .sidebar {
+    border-right: solid #20283c 1px;
     grid-area: sidebar;
     background-color: #070a13;
 }
@@ -21,6 +22,27 @@
 }
 
 .main {
+    padding: 2vw;
     grid-area: main;
     background-color: #080c16;
+}
+
+
+
+.operations h1 {
+    font-size: x-large;
+}
+
+
+.operations p {
+    color: #4a5565;
+    font-size: small;
+}
+
+
+.dashboard-card {
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    display: flex;
 }

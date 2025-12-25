@@ -1,0 +1,25 @@
+.container-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080c16;
+}
+
+.form {
+    width: 30vw;
+    height: 70vh;
+    background-color: #0b111e;
+    border: solid 1px #20283c;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.header-login {
+    display: flex;
+}
