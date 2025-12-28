@@ -1,0 +1,43 @@
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas: "sidebar-layout main-layout";
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 100vh;
+    padding: 0;
+    margin: 0;
+    max-height: 100dvh;
+    max-width: 100vw;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+.layout.sidebar-open {
+    grid-template-areas: "sidebar-layout main-layout";
+    grid-template-columns: 20vw 80vw;
+}
+
+.layout.sidebar-closed {
+    grid-template-areas: " main-layout";
+    grid-template-columns: 100vw;
+}
+
+
+.sidebar-layout {
+    grid-area: sidebar-layout;
+    background-color: #070a13;
+    color: white;
+}
+
+
+.main-layout {
+    padding: 2vw;
+    grid-area: main-layout;
+    overflow-y: auto;
+    background-color: #080c16;
+
+}

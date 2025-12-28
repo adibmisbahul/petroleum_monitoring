@@ -2,8 +2,10 @@ import "./chart.css";
 import { AllCommunityModule, ModuleRegistry } from "ag-charts-community";
 import { AgCharts } from "ag-charts-react";
 import { useState } from "react";
-import GetData from "./data";
+import GetData from "../data/data";
+
 ModuleRegistry.registerModules([AllCommunityModule]);
+
 export default function Chart() {
   const [options, setOptions] = useState({
     title: {
@@ -50,7 +52,7 @@ export default function Chart() {
     },
   });
   return (
-    <div>
+    <div className="box-chart">
       <AgCharts options={options} />
     </div>
   );

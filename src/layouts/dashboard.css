@@ -1,18 +1,22 @@
+body {
+    overflow: hidden;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-areas:
-        "sidebar header header"
-        "sidebar main main";
-    grid-template-columns: 1.2fr 3fr 3fr;
-    grid-template-rows: 80px;
-    overflow-y: hidden;
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 80px 1fr;
+    overflow: hidden;
 }
 
 .sidebar {
-    border-right: solid #20283c 1px;
     grid-area: sidebar;
+    border-right: solid #20283c 1px;
     background-color: #070a13;
 }
 
@@ -20,16 +24,26 @@
     grid-area: header;
     border-bottom: solid #20283c 1px;
     background-color: #090e1a;
+    padding: 2vw;
+}
+
+.header div {
+    gap: 5px;
+    align-items: center;
+    display: flex;
 }
 
 .main {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     padding: 2vw;
+    gap: 5vh;
     grid-area: main;
     background-color: #080c16;
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
-
 
 .operations h1 {
     font-size: x-large;
@@ -49,14 +63,30 @@
     display: flex;
 }
 
-.container-chart-alert {
+/* .container-chart-alert {
+    gap: 1vw;
     display: flex;
+    height: auto;
+} */
+
+/* .chart {
+    flex: 2;
+    height: 50vh;
+    background-color: #20283c;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-.chart{
+.alert {
+    flex: 1;
+    background-color: #20283c;
+} */
 
-}
-
-.alert{
-    
+.container-table {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
 }

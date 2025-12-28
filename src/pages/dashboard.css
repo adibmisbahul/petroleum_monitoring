@@ -1,0 +1,26 @@
+.card-dashboard {
+    display: flex;
+    gap: 1vw;
+}
+
+.main-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.chart-alert {
+    display: flex;
+    gap: 1vw;
+}
+
+.chart {
+    flex: 2;
+    height: 60vh;
+    background-color: blue;
+}
+
+.alert {
+    background-color: brown;
+    flex: 1;
+}

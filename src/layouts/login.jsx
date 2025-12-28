@@ -1,6 +1,6 @@
 import "./login.css";
 import OilIcon from "../assets/oilIcon.svg";
-import Input from "../components/input";
+import Input from "../components/ui/input";
 import { useState } from "react";
 
 export default function LoginPage() {

@@ -1,14 +1,15 @@
 .container-sidebar {
     width: 100%;
+    height: 100vh;
 }
 
 .top {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2vw;
-    border-bottom: solid 1px #20283c;
-    border-right: solid 1px #20283c;
+    gap: 1vw;
+    /* border-bottom: solid 1px #20283c;
+    border-right: solid 1px #20283c; */
 }
 
 .top h1 {
@@ -41,4 +42,13 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.main-sidebar {
+    padding: 10px;
+}
+
+
+.main-sidebar .icon {
+    fill: red;
 }

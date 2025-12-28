@@ -1,7 +1,5 @@
-import { useState } from "react";
-
-export default function table() {
-  const [data, setData] = useState([
+const DataTable = () => {
+  return [
     {
       id: "1",
       tag: "PT-1001",
@@ -90,6 +88,7 @@ export default function table() {
       unit: "BBL/D",
       lastUpdated: "1 day ago",
     },
-  ]);
-  return <div>table</div>;
-}
+  ];
+};
+
+export default DataTable;
