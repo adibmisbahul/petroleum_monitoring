@@ -13,20 +13,25 @@ import DataTable from "../data/dataTable";
 
 export default function Table() {
   const [rowData, setRowData] = useState(DataTable);
-  // console.log(rowData);
 
   const StatusCell = (props) => {
     return (
       <span
         style={{
-          padding: "4px 8px",
-          borderRadius: "6px",
+          padding: "1px 10px 1px 10px",
+          borderRadius: "10px 10px ",
+          border:
+            props.value === "online"
+              ? "solid #0f5131 1px"
+              : props.value === "maintenance"
+              ? "solid #a16c11 1px"
+              : "solid #dc2828 1px",
           backgroundColor:
             props.value === "online"
-              ? "green"
+              ? "#0d2e27"
               : props.value === "maintenance"
-              ? "#9f2d00"
-              : "red",
+              ? "#3a2e1a"
+              : "#351620",
 
           color: "white",
         }}
@@ -36,29 +41,35 @@ export default function Table() {
     );
   };
 
-  const Tag = (props) => {
-    return <p style={{ color: "#f0b100" }}>{props.value}</p>;
-  };
   const [colDefs, setColDefs] = useState([
-    { field: "tag", cellRenderer: Tag },
+    { field: "tag", width: 100, cellStyle: { color: "#dd900b" } },
     { field: "description" },
-    { field: "type" },
-    { field: "location" },
-    { headerName: "Status", field: "status", cellRenderer: StatusCell },
+    { field: "type", width: 100, cellStyle: { color: "#4a5565" } },
+    { field: "location", cellStyle: { color: "#4a5565" } },
+    { field: "status", cellRenderer: StatusCell },
     { field: "lastReading" },
     { field: "lastUpdated" },
   ]);
+
+  const defaultColDef = {
+    flex: 1,
+  };
 
   const myTheme = themeQuartz.withParams({
     spacing: 10,
     accentColor: "red",
     backgroundColor: "#0b111e",
-    headerTextColor: "rgb(204, 245, 172)",
+    headerTextColor: "#4a5565",
     foregroundColor: "white",
   });
   return (
     <div className="component-table">
-      <AgGridReact rowData={rowData} columnDefs={colDefs} theme={myTheme} />
+      <AgGridReact
+        rowData={rowData}
+        columnDefs={colDefs}
+        theme={myTheme}
+        defaultColDef={defaultColDef}
+      />
     </div>
   );
 }

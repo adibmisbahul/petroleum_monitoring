@@ -4,8 +4,8 @@
     align-items: center;
     width: 15vw;
     border-radius: 5px;
-    background-color: #0b111e;
-    border: solid 1px #20283c;
+    background-color: var(--background-component);
+    border: var(--border-color);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;

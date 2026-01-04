@@ -2,36 +2,21 @@ import "./chart.css";
 import { AllCommunityModule, ModuleRegistry } from "ag-charts-community";
 import { AgCharts } from "ag-charts-react";
 import { useState } from "react";
-import GetData from "../data/data";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 export default function Chart() {
   const [options, setOptions] = useState({
+    theme: "ag-default-dark",
     title: {
-      text: "Annual Fuel Expenditure",
+      text: "Production Output",
+      color: "white",
     },
     data: [
-      {
-        quarter: "Q1",
-        petrol: 200,
-        diesel: 100,
-      },
-      {
-        quarter: "Q2",
-        petrol: 300,
-        diesel: 130,
-      },
-      {
-        quarter: "Q3",
-        petrol: 350,
-        diesel: 160,
-      },
-      {
-        quarter: "Q4",
-        petrol: 400,
-        diesel: 200,
-      },
+      { quarter: "Q1", petrol: 200, diesel: 100 },
+      { quarter: "Q2", petrol: 300, diesel: 130 },
+      { quarter: "Q3", petrol: 350, diesel: 160 },
+      { quarter: "Q4", petrol: 400, diesel: 200 },
     ],
     series: [
       {
@@ -52,8 +37,10 @@ export default function Chart() {
     },
   });
   return (
-    <div className="box-chart">
-      <AgCharts options={options} />
+    <div className="container-chart">
+      <div className="box-chart">
+        <AgCharts options={options} style={{ height: "55vh" }} />
+      </div>
     </div>
   );
 }

@@ -1,10 +1,16 @@
 :root {
+  --background-component: #0b111e;
+  --border-color: solid 1px #20283c;
+  --background-merah-gelap: #20131f;
+  --red-color: #dc2828;
+  --text-grey: #4a5565;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+
   background-color: #242424;
 
   font-synthesis: none;

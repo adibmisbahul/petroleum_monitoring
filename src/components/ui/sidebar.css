@@ -44,6 +44,10 @@
     -o-border-radius: 10px;
 }
 
+.oilIcon img {
+    fill: red;
+}
+
 .main-sidebar {
     padding: 10px;
 }

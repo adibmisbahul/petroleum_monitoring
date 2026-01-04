@@ -4,8 +4,9 @@ import DashboardLayout from "../layouts/dashboardLayout";
 import Card from "../components/dashboard/card";
 import Chart from "../components/dashboard/chart";
 import Table from "../components/dashboard/table";
-import Input from "../components/ui/input";
 import Header from "../components/dashboard/header";
+import DataTable from "../components/data/dataTable";
+import ChartAlert from "../components/dashboard/cardAlert";
 
 // icon
 import GaugeIcon from "../assets/gauge.svg";
@@ -54,6 +55,8 @@ export default function DashboardPage() {
     },
   ]);
 
+  const [dataAlert, setDataAlert] = useState(DataTable);
+
   return (
     <DashboardLayout>
       <div className="main-dashboard">
@@ -74,7 +77,24 @@ export default function DashboardPage() {
           <div className="chart">
             <Chart />
           </div>
-          <div className="alert">p</div>
+          <div className="alert">
+            <div className="header-alert">
+              <h1>Active Alerts</h1>
+              <p>1 critical</p>
+            </div>
+            <div className="main-alert">
+              {dataAlert
+                .filter(
+                  (item) =>
+                    item.status === "warning" || item.status === "maintenance"
+                )
+                .map((item, index) => {
+                  return (
+                    <ChartAlert tag={item.tag} updateTime={item.lastUpdated} />
+                  );
+                })}
+            </div>
+          </div>
         </div>
         <Table />
       </div>

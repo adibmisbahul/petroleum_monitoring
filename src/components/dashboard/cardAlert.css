@@ -1,0 +1,24 @@
+.box-alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-left: 2px solid var(--red-color);
+    background-color: var(--background-merah-gelap);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.main-box-alert h1 {
+    
+    color: white;
+    font-size: medium;
+
+}
+
+.main-box-alert p {
+    color: red;
+
+}
