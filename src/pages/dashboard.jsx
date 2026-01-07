@@ -8,6 +8,9 @@ import Header from "../components/dashboard/header";
 import DataTable from "../components/data/dataTable";
 import ChartAlert from "../components/dashboard/cardAlert";
 
+import { FiAlertCircle } from "react-icons/fi";
+import { CiWarning } from "react-icons/ci";
+
 // icon
 import GaugeIcon from "../assets/gauge.svg";
 import OnlineIcon from "../assets/online.svg";
@@ -81,6 +84,9 @@ export default function DashboardPage() {
             <div className="header-alert">
               <h1>Active Alerts</h1>
               <p>1 critical</p>
+              <p>
+                <FiAlertCircle color="green" />
+              </p>
             </div>
             <div className="main-alert">
               {dataAlert
@@ -90,7 +96,13 @@ export default function DashboardPage() {
                 )
                 .map((item, index) => {
                   return (
-                    <ChartAlert tag={item.tag} updateTime={item.lastUpdated} />
+                    <ChartAlert
+                      tag={item.tag}
+                      updateTime={item.lastUpdated}
+                      error={item.error}
+                      location={item.location}
+                      icon={<FiAlertCircle />}
+                    />
                   );
                 })}
             </div>

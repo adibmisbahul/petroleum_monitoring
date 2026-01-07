@@ -8,8 +8,6 @@
     justify-content: center;
     align-items: center;
     gap: 1vw;
-    /* border-bottom: solid 1px #20283c;
-    border-right: solid 1px #20283c; */
 }
 
 .top h1 {
@@ -53,6 +51,6 @@
 }
 
 
-.main-sidebar .icon {
-    fill: red;
+.main-sidebar p {
+    color: #7588a3;
 }

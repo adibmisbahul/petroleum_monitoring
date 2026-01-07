@@ -10,6 +10,7 @@ const DataTable = () => {
       lastReading: "2,450",
       unit: "PSI",
       lastUpdated: "2 min ago",
+      error: "Comunication Lost",
     },
     {
       id: "2",
@@ -21,6 +22,7 @@ const DataTable = () => {
       lastReading: "1,250",
       unit: "BBL/D",
       lastUpdated: "1 min ago",
+      error: "Comunication Lost",
     },
     {
       id: "3",
@@ -32,6 +34,7 @@ const DataTable = () => {
       lastReading: "185",
       unit: "°F",
       lastUpdated: "30 sec ago",
+      error: "Comunication Lost",
     },
     {
       id: "4",
@@ -43,6 +46,7 @@ const DataTable = () => {
       lastReading: "72",
       unit: "%",
       lastUpdated: "5 min ago",
+      error: "Comunication Lost",
     },
     {
       id: "5",
@@ -54,6 +58,7 @@ const DataTable = () => {
       lastReading: "---",
       unit: "PSI",
       lastUpdated: "2 hours ago",
+      error: "Comunication Lost",
     },
     {
       id: "6",
@@ -65,6 +70,7 @@ const DataTable = () => {
       lastReading: "0.12",
       unit: "in/s",
       lastUpdated: "1 min ago",
+      error: "Comunication Lost",
     },
     {
       id: "7",
@@ -76,6 +82,7 @@ const DataTable = () => {
       lastReading: "2.5",
       unit: "PPM",
       lastUpdated: "45 sec ago",
+      error: "Comunication Lost",
     },
     {
       id: "8",
@@ -87,6 +94,7 @@ const DataTable = () => {
       lastReading: "---",
       unit: "BBL/D",
       lastUpdated: "1 day ago",
+      error: "Comunication Lost",
     },
   ];
 };
