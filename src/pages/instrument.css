@@ -1,0 +1,9 @@
+.instrument-page {
+    width: 100%;
+}
+
+.instrumen-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

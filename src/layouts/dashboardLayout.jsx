@@ -2,6 +2,7 @@ import "./dashboardLayout.css";
 import { useState } from "react";
 import Sidebar from "../components/ui/sidebar";
 import { SidebarContext } from "../hooks/sidebarContext";
+import Header from "../components/dashboard/header";
 
 export default function DashboardLayout({ children }) {
   const [isOpen, setIsOpen] = useState(true);

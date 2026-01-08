@@ -56,8 +56,8 @@ export default function Table() {
   };
 
   const myTheme = themeQuartz.withParams({
-    spacing: 10,
-    accentColor: "red",
+    rowHeight: 65,
+    accentColor: "#45556c",
     backgroundColor: "#0b111e",
     headerTextColor: "#4a5565",
     foregroundColor: "white",
