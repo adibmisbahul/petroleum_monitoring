@@ -7,7 +7,6 @@ import {
 } from "ag-grid-community";
 import "./table.css";
 
-// Register all Community features
 ModuleRegistry.registerModules([AllCommunityModule]);
 import DataTable from "../data/dataTable";
 
@@ -53,6 +52,7 @@ export default function Table() {
 
   const defaultColDef = {
     flex: 1,
+    filter: true,
   };
 
   const myTheme = themeQuartz.withParams({
@@ -65,6 +65,7 @@ export default function Table() {
   return (
     <div className="component-table">
       <AgGridReact
+        enableAdvancedFilter={true}
         rowData={rowData}
         columnDefs={colDefs}
         theme={myTheme}

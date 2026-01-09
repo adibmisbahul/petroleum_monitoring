@@ -13,9 +13,10 @@ export default function LoginPage() {
   function handleLogin() {
     if (!userName || !password) {
       alert("username dan password tidak boleh kosong");
+    } else {
+      localStorage.setItem("username", userName);
+      window.location.href = "/dashboard";
     }
-    localStorage.setItem("username", userName);
-    window.location.href = "/dashboard";
   }
 
   function handleShowPassword() {
