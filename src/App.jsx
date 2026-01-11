@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import { useState } from "react";
 import LoginPage from "./layouts/login";
 import DashboardPage from "./pages/dashboard";
@@ -13,14 +13,13 @@ import Teams from "./pages/teams";
 import NotFound from "./pages/notFound";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const { userId } = useParams;
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/dashboard/:userName" element={<DashboardPage />} />
           <Route path="/instrument" element={<InstrumentPage />} />
           <Route path="/live-data" element={<LiveData />} />
           <Route path="/fields-map" element={<FieldsMap />} />
@@ -28,6 +27,7 @@ function App() {
           <Route path="/historical-data" element={<HistoricalData />} />
           <Route path="/Reports" element={<Reports />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/profile/:userId" element={<Teams />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
