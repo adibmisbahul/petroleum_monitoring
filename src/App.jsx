@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/dashboard/:userName" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/instrument" element={<InstrumentPage />} />
           <Route path="/live-data" element={<LiveData />} />
           <Route path="/fields-map" element={<FieldsMap />} />
